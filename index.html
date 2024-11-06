@@ -1,63 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexpay Web App</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f7f7f7;
-        }
-
-        .container {
-            text-align: center;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        .title {
-            font-size: 2em;
-            color: #333;
-            margin-top: 20px;
-        }
-
-        img:hover {
-            transform: scale(1.05);
-            transition: transform 0.2s;
-        }
-    </style>
+    <title>Nexpay Tap to Earn</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container">
-        <h1 class="title">Welcome to Nexpay Web App</h1>
-
-        <!-- The GIF wrapped inside a div with an onClick event handler -->
-        <div id="gifContainer">
-            <img src="https://raw.githubusercontent.com/NEXPAY-Project/Nexpay-token-gif/3e2332af3ebb7cdd7e9fe0177820046f1d92cdb0/20241106_140931_0001.gif" alt="Nexpay Token Gif" onclick="openWebApp(event)">
-        </div>
+    <div class="app-container">
+        <div id="tap-button" class="tap-button">Tap to Earn</div>
+        <p id="counter">Taps: 0</p>
     </div>
-
-    <script>
-        // JavaScript function to handle the tap on the GIF
-        function openWebApp(event) {
-            event.preventDefault(); // Prevent the default action (like navigating or refreshing)
-            window.open('https://nexpay-project.github.io/nexpay-webapp/', '_blank'); // Open the web app in a new tab
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
-
 </html>
