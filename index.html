@@ -25,7 +25,7 @@
             max-width: 100%;
             height: auto;
             border-radius: 8px;
-            cursor: pointer; /* Show pointer cursor to indicate the image is clickable */
+            cursor: pointer;
         }
 
         .title {
@@ -34,7 +34,6 @@
             margin-top: 20px;
         }
 
-        /* Optional: Add a smooth hover effect */
         img:hover {
             transform: scale(1.05);
             transition: transform 0.2s;
@@ -47,18 +46,16 @@
         <h1 class="title">Welcome to Nexpay Web App</h1>
 
         <!-- The GIF wrapped inside a div with an onClick event handler -->
-        <div id="gifContainer" onclick="openWebApp()">
-            <img src="https://raw.githubusercontent.com/NEXPAY-Project/Nexpay-token-gif/3e2332af3ebb7cdd7e9fe0177820046f1d92cdb0/20241106_140931_0001.gif" alt="Nexpay Token Gif">
+        <div id="gifContainer">
+            <img src="https://raw.githubusercontent.com/NEXPAY-Project/Nexpay-token-gif/3e2332af3ebb7cdd7e9fe0177820046f1d92cdb0/20241106_140931_0001.gif" alt="Nexpay Token Gif" onclick="openWebApp(event)">
         </div>
-
-        <!-- Additional content can go here -->
     </div>
 
     <script>
         // JavaScript function to handle the tap on the GIF
-        function openWebApp() {
-            // Open the web app URL in a new tab without refreshing the current page
-            window.open('https://nexpay-project.github.io/nexpay-webapp/', '_blank');
+        function openWebApp(event) {
+            event.preventDefault(); // Prevent the default action (like navigating or refreshing)
+            window.open('https://nexpay-project.github.io/nexpay-webapp/', '_blank'); // Open the web app in a new tab
         }
     </script>
 </body>
