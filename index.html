@@ -27,15 +27,15 @@
   <h1>Welcome to Nexpay Tap!</h1>
   <div id="tap-button" onclick="tap()"></div>
   <div id="gif-feedback"></div>
-  <p id="balance">Your Balance: 0.00 Tokens</p>
+  <p id="balance">Your Balance: 0 Tokens</p>
 
   <script>
     let taps = 0;
-    let balance = 0.0;
+    let balance = 0;
 
     function tap() {
-      taps++;
-      balance += 0.01;
+      taps++;1
+      balance += 1;
       document.getElementById("balance").innerText = `Your Balance: ${balance.toFixed(2)} Tokens`;
       
       // Show the tap feedback GIF
