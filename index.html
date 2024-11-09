@@ -1,21 +1,65 @@
-<div id="main-container">
-  <div id="profile-section">
-    <!-- Profile icon and username will be here -->
-  </div>
-  <div id="tap-section">
-    <!-- Tap to Earn logo GIF goes here -->
-    <img src="path_to_your_gif/tap_logo.gif" alt="Tap to Earn" id="tap-logo">
-  </div>
-  <div id="buttons">
-    <button id="mine-button">Mine</button>
-    <button id="tasks-button">Tasks</button>
-    <button id="rank-button">Rank</button>
-    <button id="ref-button">Ref</button>
-    <button id="boost-button">Boost</button>
-  </div>
-  <div id="rank-level">
-    <!-- This will show the current rank icon and level text -->
-    <img src="path_to_rank_icons/wood.png" alt="Level Icon" id="level-icon">
-    <span id="level-text">Level : Wood</span>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexpay Tap to Earn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Profile Section -->
+    <div id="profile-section">
+        <img src="assets/images/profile.png" alt="Profile Icon" class="profile-icon">
+        <div class="user-info">
+            <span id="username">Username</span>
+            <span id="user-id">ID: 123456</span>
+        </div>
+        <img src="assets/images/wallet.png" alt="Wallet Icon" class="wallet-icon">
+    </div>
+
+    <!-- Tap to Earn Section -->
+    <div id="tap-section">
+        <img src="assets/images/tap_feedback.gif" alt="Tap Feedback" id="tap-feedback">
+        <img src="assets/images/logo.png" alt="Nexpay Logo" id="tap-logo">
+        <div id="rank-level">
+            <img src="assets/images/wood.png" alt="Level Icon" id="level-icon">
+            <span id="level-text">Level: Wood</span>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div id="nav-bar">
+        <button class="nav-button" id="mine-button">
+            <img src="assets/icons/mine.png" alt="Mine Icon">
+            <span>Mine</span>
+        </button>
+        <button class="nav-button" id="tasks-button">
+            <img src="assets/icons/tasks.png" alt="Tasks Icon">
+            <span>Tasks</span>
+        </button>
+        <button class="nav-button" id="rank-button">
+            <img src="assets/icons/rank.png" alt="Rank Icon">
+            <span>Rank</span>
+        </button>
+        <button class="nav-button" id="ref-button">
+            <img src="assets/icons/ref.png" alt="Ref Icon">
+            <span>Ref</span>
+        </button>
+        <button class="nav-button" id="boost-button">
+            <img src="assets/icons/boost.png" alt="Boost Icon">
+            <span>Boost</span>
+        </button>
+    </div>
+
+    <!-- Leaderboard Section (Hidden by Default) -->
+    <div id="leaderboard-section" class="hidden">
+        <h2>Leaderboard</h2>
+        <ul id="leaderboard-list">
+            <!-- Leaderboard entries will be populated here -->
+        </ul>
+    </div>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+</body>
+              </html>
