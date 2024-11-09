@@ -1,98 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexpay - Profile</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-            margin: 0;
-        }
-        .container {
-            width: 100%;
-            max-width: 800px;
-            text-align: center;
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .profile-image {
-            width: 100%;
-            max-width: 600px;
-            margin-bottom: 20px;
-        }
-        .rank {
-            font-size: 30px;
-            margin-top: 10px;
-        }
-        .tokens {
-            font-size: 24px;
-            margin-top: 10px;
-        }
-        .tap-button {
-            cursor: pointer;
-            width: 200px;
-            margin-top: 20px;
-        }
-        .button {
-            background-color: #28a745;
-            color: white;
-            padding: 10px 20px;
-            margin-top: 20px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .button:hover {
-            background-color: #218838;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <!-- Canva UI Image (Profile section with the tap button GIF included) -->
-        <img class="profile-image" src="https://raw.githubusercontent.com/NEXPAY-Project/nexpay-webapp/main/Tap%20to%20Earn_20241107_132643_0000.png" alt="Nexpay UI Design">
-
-        <div class="rank">
-            Rank: {{ rank }} <span>{{ rank_icon }}</span>
-        </div>
-        <div class="tokens">
-            Tokens: {{ tokens }}
-        </div>
-
-        <!-- Tap Button GIF (Interactive button to earn tokens) -->
-        <img id="tapButton" class="tap-button" src="https://raw.githubusercontent.com/your-username/your-repository/main/tap-button.gif" alt="Tap to Earn" onclick="tapToEarn()">
-
-        <!-- Back to Telegram Bot Link -->
-        <a href="https://t.me/your_telegram_bot?start={{ user_id }}" class="button">Back to Telegram Bot</a>
-    </div>
-
-    <script>
-        // JavaScript function to simulate tap action
-        function tapToEarn() {
-            // Simulate adding tokens and updating the user rank (optional)
-            fetch('/add_tokens', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ user_id: {{ user_id }}, amount: 10 })  // Adjust the amount to the desired number of tokens per tap
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === 'success') {
-                    // Update the token count and possibly the rank
-                    document.querySelector('.tokens').innerText = `Tokens: ${data.new_tokens}`;
-                    document.querySelector('.rank').innerText = `Rank: ${data.new_rank}`;
-                }
-            });
-        }
-    </script>
-</body>
-</html>
+<div id="main-container">
+  <div id="profile-section">
+    <!-- Profile icon and username will be here -->
+  </div>
+  <div id="tap-section">
+    <!-- Tap to Earn logo GIF goes here -->
+    <img src="path_to_your_gif/tap_logo.gif" alt="Tap to Earn" id="tap-logo">
+  </div>
+  <div id="buttons">
+    <button id="mine-button">Mine</button>
+    <button id="tasks-button">Tasks</button>
+    <button id="rank-button">Rank</button>
+    <button id="ref-button">Ref</button>
+    <button id="boost-button">Boost</button>
+  </div>
+  <div id="rank-level">
+    <!-- This will show the current rank icon and level text -->
+    <img src="path_to_rank_icons/wood.png" alt="Level Icon" id="level-icon">
+    <span id="level-text">Level : Wood</span>
+  </div>
+</div>
